@@ -1,32 +1,10 @@
 <div class="row templates">
+    <div ng-repeat="data in templates">
     <div class="col-md-4">
-        <h3>Blue Templates</h3>
-        <img src="../img/blue.jpg">
-        <h4>$19.99</h4>
-        <a href="#/templates/1" class="btn btn-primary btn-block">Details</a>
+        <h3>{{data.name}}</h3>
+        <img ng-src="../img/{{data.images[0].name}}">
+        <h4>{{data.price | currency}}</h4>
+        <a href="#/templates/{{data.id}}" class="btn btn-primary btn-block">Details</a>
     </div>
-    <div class="col-md-4">
-        <h3>Orange Templates</h3>
-        <img src="../img/orange.jpg">
-        <h4>$19.99</h4>
-        <a href="#/templates/1" class="btn btn-primary btn-block">Details</a>
-    </div>
-    <div class="col-md-4">
-        <h3>Purple Templates</h3>
-        <img src="../img/purple.jpg">
-        <h4>$19.99</h4>
-        <a href="#/templates/1" class="btn btn-primary btn-block">Details</a>
-    </div>
-    <div class="col-md-4">
-        <h3>Gray Templates</h3>
-        <img src="../img/gray.jpg">
-        <h4>$19.99</h4>
-        <a href="#/templates/1" class="btn btn-primary btn-block">Details</a>
-    </div>
-    <div class="col-md-4">
-        <h3>Green Templates</h3>
-        <img src="../img/green.jpg">
-        <h4>$19.99</h4>
-        <a href="#/templates/1" class="btn btn-primary btn-block">Details</a>
     </div>
 </div>

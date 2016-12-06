@@ -5,7 +5,12 @@
     'use strict';
 
     angular.module('templateStore.templates')
-        .controller('TemplateCtrl', ['$scope', function ($scope) {
-            console.log($scope);
+        .controller('TemplateCtrl', ['$scope','templateService', function ($scope, templateService) {
+            templateService.getData().then(function (data) {
+                console.log(data);
+                $scope.templates = data;
+            }, function (err) {
+                console.log(err);
+            });
         }]);
 })();
